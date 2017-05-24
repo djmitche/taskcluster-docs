@@ -1957,6 +1957,7 @@ Scheduler IDs are limited to 22 characters.
 We do not subdivide namespaces; instead, they are enumerated here:
 
  * `tc-diagnostics` -- the Taskcluster diagnostics tool
+ * `taskcluster-github` -- the Taskcluster Github integration
 
 --- ---
 
@@ -2366,7 +2367,15 @@ title: Task Notifications
 order: 80
 ---
 
-XXX
+There are two ways to have Taskcluster send notifications on your behalf.
+The first is by specifying certain routes in the task definition and the
+second is to call the service directly. The first method is described in
+detail on its [usage page](/reference/core/taskcluster-notify/docs/usage).
+The api definitions are available on the
+[reference page](/reference/core/taskcluster-notify/references/api). The
+api is also available through the
+[taskcluster-proxy](/reference/workers/docker-worker/docs/features#feature-taskclusterproxy-)
+if you're working from within a task.
 
 ---
 filename: using/administration.md
